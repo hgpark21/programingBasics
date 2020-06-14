@@ -1,0 +1,121 @@
+%\documentclass{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\documentclass{amsart}
+
+%\title{An Example of the Usage of the Tufte-Handout Style\thanks{Inspired by Edward~R. Tufte!}}
+%\author[The Tufte-LaTeX Developers]{The Tufte-\LaTeX\ Developers}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{tabularx,graphicx}
+
+%  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+%  \graphicspath{{graphics/}} % set of paths to search for images
+
+\usepackage{booktabs}
+\usepackage{units}
+\usepackage{multicol}
+\usepackage{fancyvrb} 
+  \fvset{fontsize=\normalsize}
+
+\usepackage{lipsum}   % filler text
+
+\newcommand{\commandname}[1]{\textcolor{blue}{$\mbox{\ttfamily#1}$}}
+\newcommand{\anglename}[1]{$<\!\mbox{\ttfamily#1}\!>$}
+\newcommand{\gitcommand}[1]{\textcolor{blue}{{\ttfamily git} \commandname{#1}}}
+
+\newcommand{\git}{\textcolor{red}{{\ttfamily git}}}
+\newcommand{\github}{\textcolor{red}{{\ttfamily GitHub}}}
+\newcommand{\html}{\textcolor{red}{{\ttfamily html}}}
+\newcommand{\css}{\textcolor{blue}{{\ttfamily CSS}}}
+\newcommand{\javascript}{\textcolor{blue}{{\ttfamily JavaScript}}}
+\newcommand{\java}{\textcolor{blue}{{\ttfamily Java}}}
+
+\newcommand{\newpara}[1]{\par\vspace{0.5em}\paragraph{\scshape#1}}
+
+\newcommand{\afakeline}{\textcolor{white}{a fake line here}}
+
+\title{\github/\git, \html, \css, and \javascript}
+\author{Heunggi Park}
+\date{June 13, 2020}
+
+\begin{document}
+
+\maketitle
+%%% header %%%
+%\begin{center}
+%\textbf{\large \git, \html, \css, and \javascript} \\[1em]% title
+%\textsc{Heunggi Park} \\[0.5em]
+%\textsc{June 13, 2020}
+%\end{center}
+
+\begin{abstract}
+	Here is an abstract of the article.
+\end{abstract}
+
+\section{\github/\git\ commands}
+
+\subsection{What is \github?}\afakeline\par\vspace{0.5em}\noindent
+
+\newpara{Write Better Code}
+On \github, lightweight code review tools are built into every pull request. Your team can create review processes that improve the quality of your code and fit neatly into your workflow.
+
+\newpara{Start with a Pull Request}
+Pull requests are fundamental to how teams review and improve code on GitHub. Evolve projects, propose new features, and discuss implementation details before changing your source code.
+
+\newpara{Make a Change}
+Start a new feature or propose a change to existing code with a pull request—a base for your team to coordinate details and refine your changes.
+
+
+\subsection{List of Basic \git\ Commands}\afakeline%\par\vspace{0.5em}\noindent
+
+\begin{multicols}{2}
+
+\begin{description}[itemsep=0.25em]
+\item[\gitcommand{clone \anglename{url}}]
+\item[\gitcommand{add \anglename{filename}}]
+\item[\gitcommand{commit -m "message"}]
+\item[\gitcommand{commit -am "message"}]
+\item[\gitcommand{push}] (\gitcommand{push "--set-upstream"})
+\item[\gitcommand{pull}] (Cf. \gitcommand{fetch})
+\item[\gitcommand{statue}]
+\item[\gitcommand{log}]
+\item[\gitcommand{branch}] (\gitcommand{branch \anglename{branchname}})
+\item[\gitcommand{checkout \anglename{branchname}}]
+\item[\gitcommand{merge \anglename{branchname}}]
+\end{description}
+\end{multicols}
+
+
+\subsection*{\gitcommand{pull} vs \gitcommand{fetch}} \afakeline\par\vspace{0.5em}\noindent
+The command \gitcommand{fetch} tells your local \git\ to retrieve the latest {\em meta-data info\/} from the original (yet doesn't do any file transferring. It's more like just checking to see if there are any changes available), whereas \gitcommand{pull} {\bf does that AND} brings those changes from the remote repository.
+
+\section{\html\ 5}
+
+\subsection{The \html\ Elements}
+\subsection{Forms}
+
+\section{\css}
+
+\subsection{\css\ Selectors}
+
+\subsection{Responsive Design}
+
+\begin{itemize}
+	\item viewport
+	\item Media Queries
+	\item Flexbox
+	\item Grids
+\end{itemize}
+
+
+\section{\javascript}
+\subsection{Basics}
+\subsection{\textcolor{blue}{\texttt Node.js}}
+\subsection{\textcolor{blue}{\texttt AJAX}}
+
+\end{document}
